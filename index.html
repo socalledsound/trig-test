@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+
+
+        .container {
+            display: flex;
+        }
+
+        .play-button{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-left: 20px;
+
+        }
+
+        .play-button:hover {
+            background-color: lightcyan;
+        }
+
+    </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
+
+
+    <title>sound</title>
+</head>
+<body>
+
+    <div class="container">
+    <div class='play-button' onclick="playSound(myOtherSound)"></div>
+    <div class='play-button' onclick="playSound(mySound)"></div>
+
+</div>
+
+    <script>
+        const mySound = new Howl({src: 'https://res.cloudinary.com/chris-kubick/video/upload/v1599435918/sounds/chunk_ynbgkh.mp3'})
+        const myOtherSound = new Howl({src: 'https://res.cloudinary.com/chris-kubick/video/upload/v1600370464/sounds/sting_umilke.mp3'})
+
+
+
+        const playSound = (sound) =>{
+            sound.play();
+        }
+
+
+    </script>
+    
+</body>
+</html>
